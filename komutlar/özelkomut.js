@@ -8,7 +8,7 @@ exports.run = function(client, message) {
 exports.conf = {
   enabled: true, //komutut açtık
   guildOnly: false, //sadece servere özel yapmadık
-  aliases: ['ping','p'], //farklı çağrılar ekledik
+  aliases: [], //farklı çağrılar ekledik
   permLevel: 0 //kimlerin kullanabileceğini yazdık (bot.js dosyasında perm leveller yazıyor)
 };
 
