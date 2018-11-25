@@ -102,13 +102,11 @@ client.on('message', msg => {
   if (msg.content === 'türk'){
     msg.channel.send('https://i.gifer.com/7tH4.gif')
   }
-  if (msg.content === prefix + 'para') {
-    economy.fetchBalance('userID').then((i) => {
-    	console.log(i) // { userID: '144645791145918464', money: 998, lastDaily: 'Not Collected' }
-      console.log(i.money) // 998
-    });	  
-  }
-    
+  if(message.content === "--para") {
+  economy.fetchBalance(message.author.id).then(i => {
+  message.reply("paran: " + i.money + "TL")
+  })
+  }    
 });
 
 client.elevation = message => {
