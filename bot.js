@@ -102,12 +102,7 @@ client.on('message', msg => {
   if (msg.content === 'türk'){
     msg.channel.send('https://i.gifer.com/7tH4.gif')
   }
-  if (msg.content === prefix + 'para') {
-    economy.fetchBalance(msg.author.id).then(i => {
-	msg.reply("Paran:"+ i.money + 'TL');
-    
-  })	  
-  }
+  
     
 });
 
