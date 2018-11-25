@@ -4,7 +4,7 @@ const ayarlar = require('./ayarlar.json');
 const chalk = require('chalk');
 const fs = require('fs');
 const moment = require('moment');
-
+const economy = require('discord-eco');
 
 
 require('./util/eventLoader')(client);
@@ -102,7 +102,12 @@ client.on('message', msg => {
   if (msg.content === 'türk'){
     msg.channel.send('https://i.gifer.com/7tH4.gif')
   }
-  
+  if (msg.content === prefix + 'para') {
+    economy.fetchBalance('userID').then((i) => {
+    	console.log(i) // { userID: '144645791145918464', money: 998, lastDaily: 'Not Collected' }
+      console.log(i.money) // 998
+    });	  
+  }
     
 });
 
