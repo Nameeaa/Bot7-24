@@ -13,7 +13,7 @@ exports.run = function(client, message) {
       .addField('>8ball',"Barış Demirciden Çalıntı Değildir :face_palm: : 8ball oynar")
       .addField('>oyunseç','Belirlenmiş oyunları seçip sizi oyun seçmekten kurtarır.')
       .addField('>spm yada >spam', 'Spam yapar')
-      .addField('>helppara','Para Komutu hakkında bilgi verir';
+      .addField('>helppara','Para Komutu hakkında bilgi verir');
       
     message.channel.send(help);
 
