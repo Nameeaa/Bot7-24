@@ -4,6 +4,7 @@ const ayarlar = require('./ayarlar.json');
 const chalk = require('chalk');
 const fs = require('fs');
 const moment = require('moment');
+const economy = require('discord-eco');
 
 
 require('./util/eventLoader')(client);
@@ -101,18 +102,11 @@ client.on('message', msg => {
   if (msg.content === 'türk'){
     msg.channel.send('https://i.gifer.com/7tH4.gif')
   }
-  
-  if(msg.content === 'gerizekalı') {
-    msg.delete();
-
-  }
-  if(msg.content === 'mal') {
-    msg.delete();
-
-  }
-  if(msg.content === 'aptal') {
-    msg.delete();
-
+  if (msg.content === prefix + 'para') {
+    economy.fetchBalance(msg.author.id).then(i => {
+	msg.reply("Paran:"+ i.money + 'TL');
+    
+  })	  
   }
     
 });
